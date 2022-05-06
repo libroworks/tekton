@@ -11,7 +11,9 @@
 	],
 	"activationEvents": [
 		"onCustomEditor:tekton.catScratch",
-		"onCommand:tekton.showPreview"
+		"onCustomEditor:tekton.markdown",
+		"onCommand:tekton.showPreviewCS",
+		"onCommand:tekton.showEditor"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -25,12 +27,27 @@
 					}
 				],
 				"priority": "option"
+			},
+			{
+				"viewType": "tekton.markdown",
+				"displayName": "TekTon Markdown",
+				"selector": [
+					{
+						"filenamePattern": "*.tekton.md"
+					}
+				],
+				"priority": "option"
 			}
 		],
 		"commands": [
 			{
-				"command": "tekton.showPreview",
-				"title": "Show Tekton Preiew",
+				"command": "tekton.showEditor",
+				"title": "Show Tekton Markdown Editor",
+				"category": "Tekton"
+			},
+			{
+				"command": "tekton.showPreviewCS",
+				"title": "Show Tekton Cat Scratch",
 				"category": "Tekton"
 			}
 		]

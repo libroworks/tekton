@@ -4,14 +4,18 @@ import { getNonce } from './util';
 
 export class CatScratchEditorProvider implements vscode.CustomTextEditorProvider{
     public static register(context: vscode.ExtensionContext): vscode.Disposable{
-        vscode.commands.registerCommand('tekton.showPreview', () =>{
+        // showPreviewコマンドを登録
+        vscode.commands.registerCommand('tekton.showPreviewCS', () =>{
 			const activeEditor = vscode.window.activeTextEditor;
 			if(!activeEditor) {
 				return;
 			}
-			vscode.commands.executeCommand('vscode.openWith', activeEditor?.document.uri, 'tekton.catScratch');
+            console.log(activeEditor.document.uri);
+            // カスタムエディタで開く
+			vscode.commands.executeCommand('vscode.openWith', activeEditor?.document.uri, CatScratchEditorProvider.viewType);
 		});
 
+        // カスタムエディタを登録
         const provider = new CatScratchEditorProvider(context);
         const providerRegistration = vscode.window.registerCustomEditorProvider(
             CatScratchEditorProvider.viewType, provider);
