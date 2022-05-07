@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body{
+    background-color: antiquewhite;
+}
+
+#mediaDialog{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.mediaItem{
+    height: 128px;
+    width: 128px;
+    border: solid 2px #888;
+    flex-shrink: 0;
+}
+/* https://web.monogusa-note.com/flexible-tabs-only-css */
+.tab-label {
+    color: White;
+    background: LightGray;
+    margin-right: 5px;
+    padding: 3px 12px;
+    order: -1;
+}
+.tab-content {
+    width: 100%;
+    display: none;
+}
+/* アクティブなタブ */
+.tab-switch:checked+.tab-label {
+    background: DeepSkyBlue;
+}
+.tab-switch:checked+.tab-label+.tab-content {
+     display: flex;
+}
+/* ラジオボタン非表示 */
+input.tab-switch {
+    display: none;
+}

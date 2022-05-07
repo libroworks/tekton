@@ -82,11 +82,29 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         const styleVSCodeUri = webview.asWebviewUri(vscode.Uri.joinPath(
             this.context.extensionUri, 'media', 'vscode.css'));
         const styleMainUri = webview.asWebviewUri(vscode.Uri.joinPath(
-            this.context.extensionUri, 'media', 'catScratch.css'));
+            this.context.extensionUri, 'media', 'tekton.css'));
 
 
-        // スクリプトのホワイトリスト
+        // スクリプトのホワイトリスト用nonce
         const nonce = getNonce();
+
+        const mediatab = `
+            <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked/><label class="tab-label" for="TAB-01">ボタン1</label>
+            <div class="tab-content">
+                <div class="mediaItem">ダミー</div>
+                <div class="mediaItem">ダミー</div>
+                <div class="mediaItem">ダミー</div>
+            </div>
+            <input id="TAB-02" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-02">ボタン2</label>
+            <div class="tab-content">
+                <div class="mediaItem">ダミー</div>
+                <div class="mediaItem">ダミー</div>
+            </div>
+            <input id="TAB-03" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-03">ボタン3</label>
+            <div class="tab-content">
+                <div class="mediaItem">ダミー</div>
+            </div>
+        `;
         
 		return /* html */`
 			<!DOCTYPE html>
@@ -116,7 +134,9 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 			<body>
 				<div id="maincontent">
 				</div>
-				
+				<dialog id="mediaDialog" open>
+                ${mediatab}
+                </dialog>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
