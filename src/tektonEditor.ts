@@ -143,7 +143,9 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
     }
 
     // webviewのJSに更新要求を送る
-    private updateWebview(webviewPanel: vscode.WebviewPanel, document: vscode.TextDocument){
+    private async updateWebview(webviewPanel: vscode.WebviewPanel, document: vscode.TextDocument){
+        const rendered = await this.engine.render(document, resourceProvider);
+
         webviewPanel.webview.postMessage({
             type: 'update',
             text: document.getText(),
