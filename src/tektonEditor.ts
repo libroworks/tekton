@@ -11,7 +11,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
                 return;
             }
             const uri = activeEditor.document.uri;
-            if(uri.path.includes('.tekton.md')){
+            if(uri.path.endsWith('.tekton.md')){
                 vscode.commands.executeCommand('vscode.openWith', uri, 
                 TektonEditorProvider.viewType);
             }
@@ -70,6 +70,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         });
 
         updateWebview();
+        this.updateMediaDialog(webviewPanel);
     }
 
     // 初期のHTMLを取得
@@ -84,27 +85,13 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         const styleMainUri = webview.asWebviewUri(vscode.Uri.joinPath(
             this.context.extensionUri, 'media', 'tekton.css'));
 
-
         // スクリプトのホワイトリスト用nonce
         const nonce = getNonce();
 
-        const mediatab = `
-            <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked/><label class="tab-label" for="TAB-01">ボタン1</label>
-            <div class="tab-content">
-                <div class="mediaItem">ダミー</div>
-                <div class="mediaItem">ダミー</div>
-                <div class="mediaItem">ダミー</div>
-            </div>
-            <input id="TAB-02" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-02">ボタン2</label>
-            <div class="tab-content">
-                <div class="mediaItem">ダミー</div>
-                <div class="mediaItem">ダミー</div>
-            </div>
-            <input id="TAB-03" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-03">ボタン3</label>
-            <div class="tab-content">
-                <div class="mediaItem">ダミー</div>
-            </div>
-        `;
+        const folders = vscode.workspace.workspaceFolders;
+        if(folders === undefined){
+            vscode.window.showInformationMessage('Tekoton:フォルダーを開いてください');
+        }
         
 		return /* html */`
 			<!DOCTYPE html>
@@ -119,7 +106,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 				-->
 				<meta http-equiv="Content-Security-Policy" 
                     content="default-src 'none'; 
-                    img-src ${webview.cspSource} filesystem://*; 
+                    img-src ${webview.cspSource}; 
                     style-src ${webview.cspSource}; 
                     script-src 'nonce-${nonce}';">
 
@@ -135,11 +122,47 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 				<div id="maincontent">
 				</div>
 				<dialog id="mediaDialog" open>
-                ${mediatab}
+                Please Open Folder.
                 </dialog>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
 
     }
+
+    // meidaDialogに挿入する画像ファイルのリストを入れる
+    private async updateMediaDialog(webviewPanel: vscode.WebviewPanel) {
+        // mediaフォルダー内の画像ファイル一覧を取得
+        const medialist = await vscode.workspace.findFiles('media/**/*.{jpg,png}');
+        console.log(medialist);
+
+        // htmlを生成
+        let reshtml = '';
+        for(const media of medialist){
+            const p = webviewPanel.webview.asWebviewUri(vscode.Uri.file(media.path));
+            reshtml += `<div class="mediaItem"><img src="${p}" alt="${p}"></div>`;
+        }
+        webviewPanel.webview.postMessage({
+            type: 'updateMedia',
+            html: reshtml,
+        });
+    }
 }
+
+        // return  /* html */`
+        //     <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked/><label class="tab-label" for="TAB-01">ボタン1</label>
+        //     <div class="tab-content">
+        //         <div class="mediaItem">ダミー</div>
+        //         <div class="mediaItem">ダミー</div>
+        //         <div class="mediaItem">ダミー</div>
+        //     </div>
+        //     <input id="TAB-02" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-02">ボタン2</label>
+        //     <div class="tab-content">
+        //         <div class="mediaItem">ダミー</div>
+        //         <div class="mediaItem">ダミー</div>
+        //     </div>
+        //     <input id="TAB-03" type="radio" name="TAB" class="tab-switch"/><label class="tab-label" for="TAB-03">ボタン3</label>
+        //     <div class="tab-content">
+        //         <div class="mediaItem">ダミー</div>
+        //     </div>
+        // `;   

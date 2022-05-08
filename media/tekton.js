@@ -7,6 +7,9 @@
   const mainContainer = /** @type {HTMLElement} */ (
     document.querySelector('#maincontent')
   );
+  const mediaDialog = /** @type {HTMLElement} */ (
+    document.querySelector('#mediaDialog')
+  );
 
   function updateContent(/**@type {string} */ text) {
     mainContainer.innerText = text;
@@ -21,6 +24,10 @@
         updateContent(text);
         // vscode.getStateの返値になるらしい
         vscode.setState({ text });
+        return;
+      case 'updateMedia':
+        const html = message.html;
+        mediaDialog.innerHTML = html;
         return;
     }
   });
