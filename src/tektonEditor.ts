@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { getNonce } from './util';
+import { MarkdownEngine } from './markdownEngine';
 
 export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 
@@ -25,8 +26,11 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
     }
 
     private static readonly viewType = 'tekton.markdown';
+    private engine:MarkdownEngine;
 
-    constructor(private readonly context: vscode.ExtensionContext){}
+    constructor(private readonly context: vscode.ExtensionContext){
+        this.engine = new MarkdownEngine();
+    }
 
     public async resolveCustomTextEditor(
         document: vscode.TextDocument, 
@@ -39,18 +43,10 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         };
         webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
-        // webviewのJSに更新要求を送る
-        function updateWebview(){
-            webviewPanel.webview.postMessage({
-                type: 'update',
-                text: document.getText(),
-            });
-        }
-
         // ドキュメントとビューの同期
         const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(e => {
             if (e.document.uri.toString() === document.uri.toString()){
-                updateWebview();
+                this.updateWebview(webviewPanel, document);
             }
         });
 
@@ -69,7 +65,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
             }
         });
 
-        updateWebview();
+        this.updateWebview(webviewPanel, document);
         this.updateMediaDialog(webviewPanel);
     }
 
@@ -147,6 +143,21 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
             html: reshtml,
         });
     }
+
+
+    // webviewのJSに更新要求を送る
+    private updateWebview(
+        webviewPanel:vscode.WebviewPanel, 
+        document:vscode.TextDocument)
+    {
+        const mdhtml = this.engine.render(document.getText());
+        webviewPanel.webview.postMessage({
+            type: 'update',
+            text: mdhtml,
+        });
+    }
+
+
 }
 
         // return  /* html */`

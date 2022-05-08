@@ -12,7 +12,7 @@
   );
 
   function updateContent(/**@type {string} */ text) {
-    mainContainer.innerText = text;
+    mainContainer.innerHTML = text;
   }
 
   // メッセージ受信
