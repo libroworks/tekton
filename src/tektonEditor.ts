@@ -44,13 +44,14 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
         // ドキュメントとビューの同期
-        const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(e => {
-            if (e.document.uri.toString() === document.uri.toString()){
+        // const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(e => {
+        const changeDocumentSubscription = vscode.workspace.onDidSaveTextDocument(e => {
+            if (e.uri.toString() === document.uri.toString()){
                 this.updateWebview(webviewPanel, document);
             }
         });
 
-        // editorが閉じたときの処理
+        // editorが閉じたときイベントを廃棄
         webviewPanel.onDidDispose(()=>{
             changeDocumentSubscription.dispose();
         });
