@@ -1,9 +1,10 @@
 import * as vscode from 'vscode';
 import { getNonce } from './util';
+import { MarkdownEngine } from './markdownEngine';
 
 export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 
-    public static register(context: vscode.ExtensionContext): vscode.Disposable{
+    public static register(context: vscode.ExtensionContext, engine: MarkdownEngine): vscode.Disposable{
         // Show Previewコマンドを登録
         vscode.commands.registerCommand('tekton.showEditor', ()=>{
             const activeEditor = vscode.window.activeTextEditor;
@@ -18,7 +19,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         });
 
         //カスタムエディタを登録
-        const provider = new TektonEditorProvider(context);
+        const provider = new TektonEditorProvider(context, engine);
         const providerRegistration = vscode.window.registerCustomEditorProvider(
             TektonEditorProvider.viewType, provider);
         return providerRegistration;            
@@ -26,7 +27,8 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
 
     private static readonly viewType = 'tekton.markdown';
 
-    constructor(private readonly context: vscode.ExtensionContext){}
+    constructor(private readonly context: vscode.ExtensionContext,
+        private readonly engine: MarkdownEngine){}
 
     public async resolveCustomTextEditor(
         document: vscode.TextDocument, 
