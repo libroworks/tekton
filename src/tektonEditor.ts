@@ -39,18 +39,10 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
         };
         webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
-        // webviewのJSに更新要求を送る
-        function updateWebview(){
-            webviewPanel.webview.postMessage({
-                type: 'update',
-                text: document.getText(),
-            });
-        }
-
         // ドキュメントとビューの同期
         const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(e => {
             if (e.document.uri.toString() === document.uri.toString()){
-                updateWebview();
+                this.updateWebview(webviewPanel, document);
             }
         });
 
@@ -69,7 +61,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
             }
         });
 
-        updateWebview();
+        this.updateWebview(webviewPanel, document);
         this.updateMediaDialog(webviewPanel);
     }
 
@@ -147,7 +139,18 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
             html: reshtml,
         });
     }
+
+    // webviewのJSに更新要求を送る
+    private updateWebview(webviewPanel: vscode.WebviewPanel, document: vscode.TextDocument){
+        webviewPanel.webview.postMessage({
+            type: 'update',
+            text: document.getText(),
+        });
+    }
+    
 }
+
+
 
         // return  /* html */`
         //     <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked/><label class="tab-label" for="TAB-01">ボタン1</label>

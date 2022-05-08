@@ -1,4 +1,4 @@
-# 2進法
+# 2 進法
 
 @@sensei w3:コンピューターの基礎になったものはいろいろあるんだけど、
 
@@ -9,28 +9,27 @@
 @posi:0
 
 @frame:t3 back003
-@o w:2進法！
-![](img0/0202_04c.png)
+@o w:2 進法！
+![](media/chara/0202_04c.png)
 @fend
 
 @@deshi c5:聞いたことあるような、ないような
 
 @frame:t1 w2 c1 back001
-![](img0/0102_12k.png)
+![](media/chara/0102_12k.png)
 @fend
 
 @@sensei:「進法」というのは、数の数え方のことで
 
-@@sensei:人間が普段使っているのは**10進法**
+@@sensei:人間が普段使っているのは**10 進法**
 
 @nega:120
 
 @frame:t3 w2
-![](img0/0203_05m.png)
+![](media/chara/0203_05m.png)
 @fend
 
-
-@@sensei:1、2、3と数えていって、9のあとで繰り上がって
+@@sensei:1、2、3 と数えていって、9 のあとで繰り上がって
 
 @@sensei:「10」になる
 
@@ -38,100 +37,97 @@
 @o:1、2、3、4、5、6、7、8、9、10！
 @fend
 
-@@deshi:ふだん10進法を使うのは、人間の指が10本だからかな？
+@@deshi:ふだん 10 進法を使うのは、人間の指が 10 本だからかな？
 
 @@sensei c5:たぶんそうだろうね
 
 @nega:40
 
 @frame:t2 dual wf
-![](img0/0103_02k.png)
-![](img0/0203_20d.png)
+![](media/chara/0103_02k.png)
+![](media/chara/0203_20d.png)
 @fend
 
 @posi:60
 
-@@sensei w3:ただし、時間のように60で1繰り上がる60進法や
+@@sensei w3:ただし、時間のように 60 で 1 繰り上がる 60 進法や
 
-@@sensei c5:12で繰り上がる12進法も使われているね
+@@sensei c5:12 で繰り上がる 12 進法も使われているね
 
 @frame:t2 c2 w3 dual
-@o:60秒、60分、<br>12時間、12支
+@o:60 秒、60 分、<br>12 時間、12 支
 
-![](img0/0203_24c.png)
+![](media/chara/0203_24c.png)
 @fend
 
-
-@@deshi c5:となると、2進法は2で繰り上がるってこと？
+@@deshi c5:となると、2 進法は 2 で繰り上がるってこと？
 
 @frame:t1 w2 back001
-![](img0/0102_12k.png)
+![](media/chara/0102_12k.png)
 @fend
 
-@@sensei:そう、0、1と来て、次は10になる
+@@sensei:そう、0、1 と来て、次は 10 になる
 
 @frame:t2 wf dual
 @o:0、1、10、11、100、101、110
 
-![](img0/0202_04c.png)
+![](media/chara/0202_04c.png)
 @fend
 
-
-@@deshi:桁がどんどん増えそうだね。なんでコンピューターは2進法を使うの？
+@@deshi:桁がどんどん増えそうだね。なんでコンピューターは 2 進法を使うの？
 
 @frame:t2 w1 c5 back000
-![](img0/0102_11h.png)
+![](media/chara/0102_11h.png)
 @fend
 
-@@sensei c5:2進法には、他にないすごく大きなメリットがあるんだ
+@@sensei c5:2 進法には、他にないすごく大きなメリットがあるんだ
 
 @nega:120
 
 @frame:t3 w2 c1 back003
-![](img0/0202_03c.png)
+![](media/chara/0202_03c.png)
 @fend
 
+### 2 進法を使う理由
 
-### 2進法を使う理由
-
-@@sensei:2進法の起源は、古代中国の八卦だといわれている
+@@sensei:2 進法の起源は、古代中国の八卦だといわれている
 
 @@deshi c6 w0:八卦？
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0202_05c.png)
-![](img0/0102_11h.png)
+![](media/chara/0202_05c.png)
+![](media/chara/0102_11h.png)
 
 @fend
 
-@@sensei:占いの一種で、陰と陽を表す2つの記号を3つ組み合わせて
+@@sensei:占いの一種で、陰と陽を表す 2 つの記号を 3 つ組み合わせて
 
-@@sensei c2:8種類の「卦」を求め、
+@@sensei c2:8 種類の「卦」を求め、
 
 @@sensei:そこに意味を見出すというものだ
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/inyou.png)
+![](media/chara/inyou.png)
 
-![](img0/0203_05m.png)
+![](media/chara/0203_05m.png)
 @fend
 
 @@sensei:八卦は数を表すものではなかったんだけど、
 
-@@sensei:陰と陽の2つの状態の組み合わせで、世界のあらゆるものを表せることを
+@@sensei:陰と陽の 2 つの状態の組み合わせで、世界のあらゆるものを表せることを
 
 @@sensei w0:示したんだ
 
 @nega:100
 
 @frame:t3 wf dual
-![](img0/hakke.png)
+![](media/chara/hakke.png)
 
-![](img0/0202_04c.png)
+![](media/chara/0202_04c.png)
 @fend
 
 @posi:40
@@ -141,10 +137,10 @@
 @nega:120
 
 @frame:t3 c1 w2 back004
-![](img0/0102_02c.png)
+![](media/chara/0102_02c.png)
 @fend
 
-@@sensei w3:「2つの状態があればいい」というのが重要なポイントで
+@@sensei w3:「2 つの状態があればいい」というのが重要なポイントで
 
 @@sensei:それこそ、まっすぐな棒と曲がった棒とか、
 
@@ -153,64 +149,62 @@
 @nega:160
 
 @frame:t3 wf dual
-![](img0/goishi.jpg)
+![](media/chara/goishi.jpg)
 
-![](img0/0202_02c.png)
+![](media/chara/0202_02c.png)
 @fend
 
-@@sensei:現在のコンピューターは2種類の電圧を使って、データを表すんだ
+@@sensei:現在のコンピューターは 2 種類の電圧を使って、データを表すんだ
 
 @@deshi c5:やっと話がコンピューターにつながったね
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0202_03c.png)
-![](img0/0102_11h.png)
+![](media/chara/0202_03c.png)
+![](media/chara/0102_11h.png)
 @fend
 
-
-@@sensei:2つの状態を表すだけでいいから、電気回路の仕組みが単純になり、
+@@sensei:2 つの状態を表すだけでいいから、電気回路の仕組みが単純になり、
 
 @@sensei c5:高集積化や高速化しやすくなる
 
 @frame:t2 wf dual
-![](img0/c0zu2.png)
+![](media/chara/c0zu2.png)
 
-![](img0/0202_04c.png)
+![](media/chara/0202_04c.png)
 @fend
 
-@@sensei:これがコンピューターが2進数を使う理由だよ
+@@sensei:これがコンピューターが 2 進数を使う理由だよ
 
 @@deshi c6 w0:なるほどね
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0202_03c.png)
-![](img0/0106_05h.png)
+![](media/chara/0202_03c.png)
+![](media/chara/0106_05h.png)
 @fend
 
+## 2 進法の使い方
 
-## 2進法の使い方
+@@sensei:2 進法による数え方を考案したのは、ライプニッツさんという
 
-@@sensei:2進法による数え方を考案したのは、ライプニッツさんという
-
-@@sensei c5 w1:17世紀の数学者だ
+@@sensei c5 w1:17 世紀の数学者だ
 
 @@deshi c6 w1:髪型がすごい！
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0203_05m.png)
-![](img0/0102_10k.png)
+![](media/chara/0203_05m.png)
+![](media/chara/0102_10k.png)
 @fend
 
 @frame:w2
 ![](https://upload.wikimedia.org/wikipedia/commons/6/6a/Gottfried_Wilhelm_von_Leibniz.jpg)
 ゴットフリート・ライプニッツ<br>
-ドイツの数学者、哲学者（1646～1716年）
+ドイツの数学者、哲学者（1646 ～ 1716 年）
 @fend
 
 @@sensei w1:八卦にはまって、
@@ -222,11 +216,9 @@
 @nega:100
 
 @frame:t3 wf dual
-![](img0/0202_03c.png)
-![](img0/0106_03n.png)
+![](media/chara/0202_03c.png)
+![](media/chara/0106_03n.png)
 @fend
-
-
 
 @@sensei w1:この頃の学問は、趣味と仕事の
 
@@ -235,23 +227,22 @@
 @nega:90
 
 @frame:t3 w2 back003
-![](img0/0203_05m.png)
+![](media/chara/0203_05m.png)
 @fend
 
 @@deshi c5:人間が紙とペンで計算していた時代だから
 
-@@deshi c5:たぶん2進法とか必要なかったよね
+@@deshi c5:たぶん 2 進法とか必要なかったよね
 
 @@deshi c5:変わった人だ……
 
 @nega:120
 
 @frame:t2 c1 w1
-![](img0/0102_11h.png)
+![](media/chara/0102_11h.png)
 @fend
 
-
-@@sensei c3 w1:とにかく2進法は
+@@sensei c3 w1:とにかく 2 進法は
 
 @@sensei c5:コンピューターが誕生する数百年前から存在したんだ
 
@@ -260,168 +251,165 @@
 @nega:80
 
 @frame:t3 wf c1 dual
-![](img0/0102_02c.png)
-![](img0/0202_06e.png)
+![](media/chara/0102_02c.png)
+![](media/chara/0202_06e.png)
 @fend
 
 @posi:40
 
-
-@@sensei w1:2進法と10進法の数の対応は
+@@sensei w1:2 進法と 10 進法の数の対応は
 
 @@sensei w1:次の表のとおり
 
 @nega:120
 
 @frame:t2 w2 c5
-![](img0/0203_20d.png)
+![](media/chara/0203_20d.png)
 @fend
 
-|2進数 |10進数
-|--|--
-|0 |0
-|1 |1
-|10 | 2
-|11 | 3
-|100 | 4
-|101 | 5
-|110 | 6
-|111 | 7
-|1000 | 8
-|1001 | 9
-|……|……
-|10000 | 16
-|100000 | 32
-|1000000 | 64
-|10000000 | 128
-|100000000 | 256
-|1000000000 | 512
-|10000000000 | 1024
+| 2 進数      | 10 進数 |
+| ----------- | ------- |
+| 0           | 0       |
+| 1           | 1       |
+| 10          | 2       |
+| 11          | 3       |
+| 100         | 4       |
+| 101         | 5       |
+| 110         | 6       |
+| 111         | 7       |
+| 1000        | 8       |
+| 1001        | 9       |
+| ……          | ……      |
+| 10000       | 16      |
+| 100000      | 32      |
+| 1000000     | 64      |
+| 10000000    | 128     |
+| 100000000   | 256     |
+| 1000000000  | 512     |
+| 10000000000 | 1024    |
 
 @posi:5
 
 @div:small
-※2進法で表した数を2進数、10進法で表した数を10進数と呼びます
+※2 進法で表した数を 2 進数、10 進法で表した数を 10 進数と呼びます
 @divend
 
 @@deshi c1:あ～！　もう挫折しそう
 
-@@sensei c5:まずは片手の指を使って、10進数の15まで数える方法を覚えてみよう
+@@sensei c5:まずは片手の指を使って、10 進数の 15 まで数える方法を覚えてみよう
 
 @nega:80
 
 @frame:t3 wf dual back002
-![](img0/0102_22c.png)
-![](img0/0202_04c.png)
+![](media/chara/0102_22c.png)
+![](media/chara/0202_04c.png)
 @fend
 
-@@deshi c6 w1:片手で15？　5じゃないの？
+@@deshi c6 w1:片手で 15？　 5 じゃないの？
 
 @frame:t2 c2 w2 back001
-![](img0/0106_03n.png)
+![](media/chara/0106_03n.png)
 @fend
 
+@@sensei w3:![](media/chara/face001.png)1 本の指が 2 進数の一桁だとすると、
 
-@@sensei w3:![](img0/face001.png)1本の指が2進数の一桁だとすると、
+@@sensei:全部の指を立てた状態は 0 を表す
 
-@@sensei:全部の指を立てた状態は0を表す
-
-@@deshi c6 w1:![](img0/face001.png)これが0だね
+@@deshi c6 w1:![](media/chara/face001.png)これが 0 だね
 
 @frame:t2 w1
-![](img0/finger00.png)
+![](media/chara/finger00.png)
 @fend
 
-@@sensei:![](img0/face001.png)親指を折ったら1
+@@sensei:![](media/chara/face001.png)親指を折ったら 1
 
-@@deshi c6 w1:![](img0/face001.png)ここまでは10進数と同じだね
+@@deshi c6 w1:![](media/chara/face001.png)ここまでは 10 進数と同じだね
 
 @frame:t2 w1
-![](img0/finger01.png)
+![](media/chara/finger01.png)
 @fend
 
-@@sensei:![](img0/face001.png)2進数はここで繰り上がるから
+@@sensei:![](media/chara/face001.png)2 進数はここで繰り上がるから
 
-@@sensei:人差し指を折って、親指を伸ばすと2だ
+@@sensei:人差し指を折って、親指を伸ばすと 2 だ
 
 @frame:t2 w1
-![](img0/finger02.png)
+![](media/chara/finger02.png)
 @fend
 
-@@sensei:![](img0/face001.png)親指も折ると3
+@@sensei:![](media/chara/face001.png)親指も折ると 3
 
-@@deshi c5:![](img0/face001.png)10進数と変わってきたね
+@@deshi c5:![](media/chara/face001.png)10 進数と変わってきたね
 
 @frame:t2 w1
-![](img0/finger03.png)
+![](media/chara/finger03.png)
 @fend
 
-@@sensei w3:![](img0/face001.png)ここでまた繰り上がって、
+@@sensei w3:![](media/chara/face001.png)ここでまた繰り上がって、
 
-@@sensei c2:中指のみを折ると4
+@@sensei c2:中指のみを折ると 4
 
-@@deshi c5:![](img0/face018.png)あっ、指がつりそう
+@@deshi c5:![](media/chara/face018.png)あっ、指がつりそう
 
 @frame:t2 w1
-![](img0/finger04.png)
+![](media/chara/finger04.png)
 @fend
 
-@@sensei w1:![](img0/face001.png)親指も折って5
+@@sensei w1:![](media/chara/face001.png)親指も折って 5
 
 @frame:t2 w1
-![](img0/finger05.png)
+![](media/chara/finger05.png)
 @fend
 
-@@sensei:![](img0/face001.png)親指を伸ばして人差し指を折ると6
+@@sensei:![](media/chara/face001.png)親指を伸ばして人差し指を折ると 6
 
 @frame:t2 w1
-![](img0/finger06.png)
+![](media/chara/finger06.png)
 @fend
 
-@@deshi c5:![](img0/face001.png)次はわかった！　また親指を折ると7だね
+@@deshi c5:![](media/chara/face001.png)次はわかった！　また親指を折ると 7 だね
 
 @frame:t2 w1
-![](img0/finger07.png)
+![](media/chara/finger07.png)
 @fend
 
-@@sensei w3:![](img0/face001.png)そう、あとはこの繰り返しだ
+@@sensei w3:![](media/chara/face001.png)そう、あとはこの繰り返しだ
 
 @frame:t3 wf
-![](img0/fingers8-15.png)
+![](media/chara/fingers8-15.png)
 @fend
 
-@@sensei:15まで数えられればだいたいの用は足りるから
+@@sensei:15 まで数えられればだいたいの用は足りるから
 
 @@sensei c2:体で覚えるまで何度もやってみるといいよ
 
 @@deshi c5:コツがわかると面白いね
 
 @frame:t3 wf dual
-![](img0/0202_03c.png)
-![](img0/0102_02c.png)
+![](media/chara/0202_03c.png)
+![](media/chara/0102_02c.png)
 @fend
 
 @posi:60
 
+@@sensei w2:![](media/chara/face001.png)別の見方をすると
 
-@@sensei w2:![](img0/face001.png)別の見方をすると
-
-@@sensei c2 w3:2進数の各桁は2の倍数になっている
+@@sensei c2 w3:2 進数の各桁は 2 の倍数になっている
 
 @frame:t1 wf
-![](img0/c0zu3.png)
+![](media/chara/c0zu3.png)
 @fend
 
-@@sensei w2:![](img0/face001.png)これを「重み」といって、
+@@sensei w2:![](media/chara/face001.png)これを「重み」といって、
 
-@@sensei c2 w3:各桁の0/1と重みを掛けて足して
+@@sensei c2 w3:各桁の 0/1 と重みを掛けて足して
 
-@@sensei:10進数に換算することもできるんだ
+@@sensei:10 進数に換算することもできるんだ
 
 @nega:100
 
 @frame:t2 wf
-![](img0/c0zu3b.png)
+![](media/chara/c0zu3b.png)
 @fend
 
 @@deshi:少し難しそうだけど
@@ -431,86 +419,85 @@
 @nega:100
 
 @frame:t2
-![](img0/0102_10k.png)
+![](media/chara/0102_10k.png)
 @fend
 
-@@sensei w3:![](img0/face001.png)逆に10進数を2進数に変換するときは重みで割った余りを求めていくんだけど……
+@@sensei w3:![](media/chara/face001.png)逆に 10 進数を 2 進数に変換するときは重みで割った余りを求めていくんだけど……
 
 @frame:t1 w3
-@o:15÷8……1余り7<br>7÷4……1余り3<br>3÷2……1余り1
+@o:15÷8……1 余り 7<br>7÷4……1 余り 3<br>3÷2……1 余り 1
 @fend
 
 @posi:40
 
-@@sensei:16進数を介したほうが楽だと思うよ
+@@sensei:16 進数を介したほうが楽だと思うよ
 
-@@deshi c7 w0:16進数？
+@@deshi c7 w0:16 進数？
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0202_05c.png)
-![](img0/0102_11h.png)
+![](media/chara/0202_05c.png)
+![](media/chara/0102_11h.png)
 @fend
 
-## 16進数
+## 16 進数
 
-@@sensei:16進数は、16進法で表した数で
+@@sensei:16 進数は、16 進法で表した数で
 
-@@sensei:0～9とアルファベットのA～Fを使う
-
+@@sensei:0 ～ 9 とアルファベットの A ～ F を使う
 
 @nega:160
 
 @frame:t4 wf dual
-![](img0/0202_05c.png)
-![](img0/c0zu4.png)
+![](media/chara/0202_05c.png)
+![](media/chara/c0zu4.png)
 @fend
 
-@@deshi c5:![](img0/face007.png)ふーん？
+@@deshi c5:![](media/chara/face007.png)ふーん？
 
-@@sensei w3:![](img0/face001.png)2進法と並んで、コンピューターでよく使われる進法だ
+@@sensei w3:![](media/chara/face001.png)2 進法と並んで、コンピューターでよく使われる進法だ
 
 @@sensei c2 w3:0～15までを3つの進法で表すとこのとおり
 
-|2進数 |16進法 |10進数
-|--|--|--
-|0 |0 |0
-|1 |1 |1
-|10 |2 |2
-|11 |3 |3
-|100 |4 |4
-|101 |5 |5
-|110 |6 |6
-|111 |7 |7
-|1000 |8 |8
-|1001 |9 |9
-|1010 |A |10
-|1011 |B |11
-|1100 |C |12
-|1101 |D |13
-|1110 |E |14
-|1111 |F |15
+| 2 進数 | 16 進法 | 10 進数 |
+| ------ | ------- | ------- |
+| 0      | 0       | 0       |
+| 1      | 1       | 1       |
+| 10     | 2       | 2       |
+| 11     | 3       | 3       |
+| 100    | 4       | 4       |
+| 101    | 5       | 5       |
+| 110    | 6       | 6       |
+| 111    | 7       | 7       |
+| 1000   | 8       | 8       |
+| 1001   | 9       | 9       |
+| 1010   | A       | 10      |
+| 1011   | B       | 11      |
+| 1100   | C       | 12      |
+| 1101   | D       | 13      |
+| 1110   | E       | 14      |
+| 1111   | F       | 15      |
 
-@@deshi c5 w2:3つの進法を混ぜたらかえって面倒くさくない？
+@@deshi c5 w2:3 つの進法を混ぜたらかえって面倒くさくない？
 
 @nega:80
 
 @frame:t2 w1
-![](img0/0102_10k.png)
+![](media/chara/0102_10k.png)
 @fend
 
-@@sensei:いや、16進法はコンピューターにも、人間にも都合がいいんだ
+@@sensei:いや、16 進法はコンピューターにも、人間にも都合がいいんだ
 
 @frame:t2 w2
-![](img0/0202_04c.png)
+![](media/chara/0202_04c.png)
 @fend
 
 @posi:80
 
-@@sensei:![](img0/face001.png)例えば、この2進数を10進数に変換してみて
+@@sensei:![](media/chara/face001.png)例えば、この 2 進数を 10 進数に変換してみて
 
-@@deshi c5:![](img0/face018.png)えっ！　桁が多すぎるよ
+@@deshi c5:![](media/chara/face018.png)えっ！　桁が多すぎるよ
 
 @nega:80
 
@@ -518,15 +505,15 @@
 @o:110100111011
 @fend
 
-@@sensei:ここで1回16進数を挟んでみよう
+@@sensei:ここで 1 回 16 進数を挟んでみよう
 
 @frame:t2 c5 w2
-![](img0/0203_05m.png)
+![](media/chara/0203_05m.png)
 @fend
 
-@@sensei w3:![](img0/face001.png)16進数の1桁は2進数の4桁にあたるから
+@@sensei w3:![](media/chara/face001.png)16 進数の 1 桁は 2 進数の 4 桁にあたるから
 
-@@sensei c5:次のように4桁ずつ分割できる
+@@sensei c5:次のように 4 桁ずつ分割できる
 
 @nega:100
 
@@ -534,49 +521,48 @@
 @o:1101:0011:1011
 @fend
 
-@@sensei:![](img0/face001.png)4桁ごとに16進数に変換してみよう
+@@sensei:![](media/chara/face001.png)4 桁ごとに 16 進数に変換してみよう
 
 @@deshi c5:さっきの表を見て変換するから、ちょっと待ってて
 
 @nega:22
 
 @frame:t1
-![](img0/0106_01k.png)
+![](media/chara/0106_01k.png)
 @fend
 
-
-@@deshi:![](img0/face001.png)わかった！　D3Bだ
+@@deshi:![](media/chara/face001.png)わかった！　 D3B だ
 @frame:t2 w3
-@o:1101:0011:1011<br><br>13　:　3　:　11<br><br>D　:　3　:　B
+@o:1101:0011:1011<br><br>13 　:　 3 　:　 11<br><br>D 　:　 3 　:　 B
 @fend
 
-@@sensei w3:![](img0/face001.png)これに16進法の重みを掛けて10進数に変換する
+@@sensei w3:![](media/chara/face001.png)これに 16 進法の重みを掛けて 10 進数に変換する
 
-@@sensei c5:16進法の2桁目は16、3桁目は256だから
+@@sensei c5:16 進法の 2 桁目は 16、3 桁目は 256 だから
 
-@@sensei c2 w1:3387となる
+@@sensei c2 w1:3387 となる
 
 @nega:4
 
 @frame:t1 wf
-@o:D✕16<sup>2</sup>+3✕16<sup>1</sup>＋B<br>＝13×256+3×16+11<br>=3387
+@o:D✕16<sup>2</sup>+3✕16<sup>1</sup>＋ B<br>＝ 13×256+3×16+11<br>=3387
 @fend
 
-@@deshi w3:なるほど、2進数から直接変換するより
+@@deshi w3:なるほど、2 進数から直接変換するより
 
 @@deshi:計算が少し簡単になったかな……？
 
 @nega:80
 
 @frame:t2 c6 w1
-![](img0/0102_11h.png)
+![](media/chara/0102_11h.png)
 @fend
 
-@@sensei w3:![](img0/face001.png)それに、人間が桁の多い2進数を覚えるのは無理だけど
+@@sensei w3:![](media/chara/face001.png)それに、人間が桁の多い 2 進数を覚えるのは無理だけど
 
-@@sensei:16進数の「D3B」なら覚えられるよね
+@@sensei:16 進数の「D3B」なら覚えられるよね
 
-@@deshi c6 w1:![](img0/face001.png)確かに
+@@deshi c6 w1:![](media/chara/face001.png)確かに
 
 @nega:60
 
@@ -586,47 +572,44 @@
 
 @posi:40
 
-@@sensei:10進数に比べて、2進数と桁もきれいに合う
+@@sensei:10 進数に比べて、2 進数と桁もきれいに合う
 
 @nega:100
 
 @frame:t2 wf dual
 @o:255<br>11111111<br>FF
 
-![](img0/0202_04c.png)
+![](media/chara/0202_04c.png)
 @fend
 
-@@sensei:だから16進数は、人間とコンピューターの架け橋として使われるんだ
+@@sensei:だから 16 進数は、人間とコンピューターの架け橋として使われるんだ
 
 @frame:t2 wf dual
-@o:コンピューター<br>↓↑<br>16進数<br>↓↑<br>人間
+@o:コンピューター<br>↓↑<br>16 進数<br>↓↑<br>人間
 
-![](img0/0202_06e.png)
+![](media/chara/0202_06e.png)
 @fend
 
-@@sensei w3:10進数、16進数、2進数のすべてで、0～15を表せるようになると、
+@@sensei w3:10 進数、16 進数、2 進数のすべてで、0 ～ 15 を表せるようになると、
 
 @@sensei:たいていの用は足りるようになるよ
 
-@@deshi c5:だから、15までの数え方を教えてくれたんだね
+@@deshi c5:だから、15 までの数え方を教えてくれたんだね
 
 @nega:120
 
 @frame:t3 wf dual
-![](img0/0202_03c.png)
-![](img0/0106_05h.png)
+![](media/chara/0202_03c.png)
+![](media/chara/0106_05h.png)
 @fend
 
-
-## 2進法の計算
+## 2 進法の計算
 
 ## 情報量の単位
 
-
-
-
 @div:staff
+
 - 文：○○
 - 絵：○○
 - 参考資料
-@divend
+  @divend
