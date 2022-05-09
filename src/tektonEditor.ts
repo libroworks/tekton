@@ -128,7 +128,7 @@ export class TektonEditorProvider implements vscode.CustomTextEditorProvider{
     }
 
     // meidaDialogに挿入する画像ファイルのリストを入れる
-    private async updateMediaDialog(webviewPanel: vscode.WebviewPanel) {
+    private async updateMediaDialog(webviewPanel: vscode.WebviewPanel):Promise<void> {
         // mediaフォルダー内の画像ファイル一覧を取得
         const medialist = await vscode.workspace.findFiles('media/**/*.{jpg,png}');
         console.log(medialist);
